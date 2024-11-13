@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid bg-black p-4 text-light"onload="LoadTask()">
+    <div class="bg-danger  d-flex p-4 justify-content-center align-items-center">
+        <div class="w-25">
+            <div>
+                <h1>Todo App</h1>
+                <h4>Add Task</h4>
+                <div class="input-group">
+                <input type="text"id="txtTask" placeholder="Add new Task">
+                <button class="btn btn-primary" onclick="AddClick()">Add</button>
+                </div>
+            </div>
+            <div class="my-4 ">
+                <select class="form-select"size="3" id="lstTasks"></select>
+            </div>
+            <div>
+                <label id="lblCount"></label>
+            </div>
+            <div>
+                <button onclick="DeleteClick()">Delete</button>
+                <button onclick="EditClick()" data-bs-toggle="modal" data-bs-target="#edit">Edit</button>
+                <div class="modal" id="edit">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Edit Task</h3>
+                                <button class="data-bs-dismiss"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" id="txtEditTask"class="form-control">
+                            </div>
+                            <div class="modal-footer">
+                                <button onclick="SaveClick()" data-bs-dismiss="modal">Save</button>
+                                <button data-bs-dismiss="modal">Cancel</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ClearClick()">Clear</button>
+            </div>
+
+        </div>
+       
+
+    </div>
+    
+    
+</body>
+<script src="./script.js"></script>
+</html>

@@ -1,0 +1,19 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+ }
+ body{
+    background: rgb(220, 97, 220);
+    color: yellow;
+ }
+ .container-fluid{
+ margin: 10%;
+ width: 90%;
+ max-width: 700px;
+
+ }
+.display imput{
+    border: 1px solid lime;
+ }

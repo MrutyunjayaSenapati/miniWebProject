@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container-fluid bg-black p-5 " onload="bodyload()">
+    <div class="container bg-light p-5 d-flex justify-content-center align-items-center">
+        <div class="w-50">
+            <div class=" input-group">
+                <input id="txtInput" type="text" class="">
+                <button class="w-25 form-control btn btn-primary" onclick="generateQR()" data-bs-toggle="modal"
+                data-bs-target="#QR">Genrate QR code</button>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="modal fade"id="QR">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <div id="inputResult"></div>
+
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <img id="ResultQR" src="" alt="qr code will appear here">
+                </div>
+                <div class="modal-footer">
+                    <div data-bs-dismiss="modal" class="btn btn-warning">close</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
