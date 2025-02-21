@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Web Time Tracker",
+    "version": "1.0",
+    "description": "Track your daily browser activity and block sites after set limits.",
+    "permissions": ["storage", "tabs", "alarms", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+      }
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["logo.png"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
